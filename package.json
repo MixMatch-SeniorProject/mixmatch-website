@@ -3,12 +3,14 @@
   "name": "mixmatch-website-new",
   "version": "0.1.0",
   "private": true,
- "scripts": {
-  "dev": "next dev",
-  "build": "next build",
-  "deploy": "next build && gh-pages -d out",
-  "start": "next start"
-},
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "export": "next export",
+    "deploy": "next build && next export && gh-pages -d out",
+    "start": "next start",
+    "lint": "eslint"
+  },
   "dependencies": {
     "framer-motion": "^11.18.2",
     "motion-dom": "^12.38.0",
