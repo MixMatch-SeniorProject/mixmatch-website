@@ -74,49 +74,53 @@ const stack = [
 
 const screenshots = [
   {
-    src: '/home.jpeg',
+    src: '/home.jpg',
     title: 'Home Matching Screen',
     desc: 'The main discovery view presents users through large profile cards, anthem-based identity, and segmented interaction filters.',
   },
   {
-    src: '/likes.jpeg',
+    src: '/likes.jpg',
     title: 'Likes Screen',
     desc: 'The likes interface organizes connections into All, Date, and Friend categories for a cleaner and more flexible browsing experience.',
   },
   {
-    src: '/chat.jpeg',
-    title: 'Messaging Screen',
-    desc: 'The messaging interface supports direct user conversation in a dark, focused layout designed for simple and modern communication.',
-  },
+  src: '/feed.jpg',
+  title: 'Feed Screen',
+  desc: 'The feed screen showcases user anthems and events whhich helps users explore new songs and events.',
+},
   {
-    src: '/profile.jpeg',
+    src: '/profile.jpg',
     title: 'Profile Screen',
     desc: 'The profile page centralizes account management, profile editing, and personalization in a polished and consistent layout.',
   },
 ];
 
-const teamMembers = [
+  const teamMembers = [
   {
     name: 'Rabdeep Singh',
     role: 'Frontend Development & Website Design',
+    image: '/team/rabdeep.jpg',
     description:
       'Focused on interface presentation, visual refinement, and the design and development of the MixMatch project website.',
   },
   {
     name: 'Dean Husain',
     role: 'Team Leader & Backend Development',
+    image: '/team/dean.jpg',
     description:
       'Led project coordination, supported implementation planning, and contributed to backend development and overall technical direction.',
   },
   {
     name: 'Keerthi Kapavarapu',
     role: 'Frontend Development',
+    image: '/team/keerthi.jpg',
     description:
       'Contributed to the user experience and supported development across core screens, interaction flow, and interface refinement.',
   },
   {
     name: 'Jennifer Kwon',
     role: 'Frontend Development',
+    image: '/team/jennifer.jpg',
     description:
       'Assisted with app development, collaborative implementation, and continued refinement of the MixMatch user experience.',
   },
@@ -170,79 +174,70 @@ export default function Home() {
         </div>
       </nav>
 
-      <section className="mx-auto max-w-6xl px-6 py-24">
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-purple-300"
-        >
-          Music-Inspired Matching Experience
-        </motion.p>
+      <section className="mx-auto max-w-7xl px-6 py-24">
+  <div className="grid items-center gap-12 md:grid-cols-2">
 
-        <motion.h2
-          initial={{ opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="max-w-5xl text-5xl font-bold leading-tight md:text-7xl"
-        >
-          A modern matching app built around
-          <span className="text-purple-400"> interaction, style, and identity.</span>
-        </motion.h2>
+    {/* LEFT SIDE (TEXT) */}
+    <div>
+      <motion.p
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6 }}
+        className="mb-4 text-sm font-semibold uppercase tracking-[0.3em] text-purple-300"
+      >
+        Music-Inspired Matching Experience
+      </motion.p>
 
-        <motion.p
-          initial={{ opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="mt-8 max-w-4xl text-lg leading-9 text-white/70 md:text-xl"
-        >
-          MixMatch is a senior project exploring a more immersive matching experience through
-          strong profile presentation, structured interaction flows, real-time messaging, and a
-          unified black-and-purple mobile interface.
-        </motion.p>
+      <motion.h2
+        initial={{ opacity: 0, y: 28 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="max-w-5xl text-5xl font-bold leading-tight md:text-6xl"
+      >
+        A modern matching app built around
+        <span className="text-purple-400"> interaction, style, and identity.</span>
+      </motion.h2>
 
-        <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.15 }}
-          className="mt-10 flex flex-wrap gap-4"
-        >
-          <a
-            href="#screens"
-            className="rounded-full bg-purple-500 px-6 py-3 font-semibold text-white transition hover:bg-purple-400"
-          >
-            View Screens
-          </a>
+      <motion.p
+        initial={{ opacity: 0, y: 28 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1 }}
+        className="mt-6 text-lg leading-9 text-white/70"
+      >
+        MixMatch is a senior project exploring a more immersive matching experience through
+        strong profile presentation, structured interaction flows, and real-time interaction.
+      </motion.p>
 
-          <a
-            href="#process"
-            className="rounded-full border border-purple-400/40 px-6 py-3 font-semibold text-purple-200 transition hover:bg-white/5"
-          >
-            Development Process
-          </a>
-        </motion.div>
-
-        <motion.div
-          initial={{ opacity: 0, y: 28 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1.25 }}
-          className="mt-14 grid max-w-3xl gap-6 md:grid-cols-3"
+      <div className="mt-8 flex gap-4">
+        <a
+          href="#screens"
+          className="rounded-full bg-purple-500 px-6 py-3 font-semibold text-white hover:bg-purple-400 transition"
         >
-          {[
-            ['4', 'Featured App Screens'],
-            ['3', 'Browsing Categories'],
-            ['1', 'Unified Design System'],
-          ].map(([num, label]) => (
-            <div
-              key={label}
-              className="rounded-3xl border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/20"
-            >
-              <p className="text-3xl font-bold text-purple-300">{num}</p>
-              <p className="mt-1 text-sm text-white/60">{label}</p>
-            </div>
-          ))}
-        </motion.div>
-      </section>
+          View Screens
+        </a>
+
+        <a
+          href="#process"
+          className="rounded-full border border-purple-400/40 px-6 py-3 font-semibold text-purple-200 hover:bg-white/5 transition"
+        >
+          Development Process
+        </a>
+      </div>
+    </div>
+
+    {/* RIGHT SIDE (GIF) */}
+    <div className="flex justify-center">
+      <div className="bg-black p-3 rounded-[2rem] shadow-2xl">
+        <img
+          src="/matching.gif"
+          alt="Matching Demo"
+          className="rounded-[1.5rem] w-[280px] md:w-[320px]"
+        />
+      </div>
+    </div>
+
+  </div>
+</section>
 
       <section id="overview" className="border-t border-white/10">
         <div className="mx-auto grid max-w-7xl gap-10 px-6 py-24 lg:grid-cols-[1.2fr_0.8fr]">
@@ -252,13 +247,13 @@ export default function Home() {
             </p>
             <h3 className="text-4xl font-bold md:text-5xl">What is MixMatch?</h3>
             <p className="mt-6 text-lg leading-8 text-white/70">
-              MixMatch is a mobile senior project that explores how a matching platform can feel
+              MixMatch is a mobile app that explores how a matching platform can feel
               more immersive, intentional, and visually cohesive. Instead of relying only on a
               generic swipe model, the project emphasizes presentation, categorized discovery,
               clean profile layouts, and conversation-oriented interaction.
             </p>
             <p className="mt-6 text-lg leading-8 text-white/70">
-              This website serves as a showcase of the project’s current interface, design
+              This website serves as a showcase of the app's current interface, design
               direction, technical structure, and ongoing development progress.
             </p>
           </motion.div>
@@ -475,9 +470,14 @@ export default function Home() {
                 transition={{ duration: 0.55, delay: index * 0.07 }}
                 className="rounded-[28px] border border-white/10 bg-white/5 p-6 shadow-lg shadow-black/20 transition hover:border-purple-400/30"
               >
-                <div className="mb-5 flex h-14 w-14 items-center justify-center rounded-2xl bg-purple-500/20 text-lg font-bold text-purple-200">
-                  {member.name.charAt(0)}
-                </div>
+              <div className="mb-5 flex justify-center">
+  <img
+    src={member.image}
+    alt={member.name}
+    className="h-20 w-20 rounded-full object-cover border-2 border-purple-400/40 shadow-lg hover:scale-105 transition duration-300"
+  />
+</div>
+        
                 <p className="text-xs font-semibold uppercase tracking-[0.25em] text-purple-300">
                   {member.role}
                 </p>
